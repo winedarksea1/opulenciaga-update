@@ -1,4 +1,3 @@
-'use strict'
 
 const Sequelize = require('sequelize');
 const db = require('APP/db');
@@ -12,26 +11,27 @@ module.exports = db.define('orders', {
     totalPrice: {
       type: Sequelize.DOUBLE,
       defaultValue: 0
-    }
+    },
     orderDate: {
       type: Sequelize.DATE
     }
   },
+  {
   instanceMethods: {
     changeStatus: function(status) {
       this.orderStatus = status;
     },
     sumTotalPrice: function() {
-      Product.findAll({where: {this.id: orderId}})
+      this.getProducts()
       .then((products) => {
         products.forEach((product) => {
           this.totalPrice += product.price;
-        })
+        });
         return this.totalPrice;
-      })
+      });
     },
     setOrderDate: function(date) {
       this.orderDate = date;
     }
   }
-)
+  });
