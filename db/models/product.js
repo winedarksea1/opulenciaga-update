@@ -30,4 +30,6 @@ module.exports = db.define('products', {
     allowNull: false,
   }
 
+}, instanceMethods: {
+
 })
