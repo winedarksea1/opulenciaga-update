@@ -21,17 +21,17 @@ module.exports = db.define('orders', {
     changeStatus: function(status) {
       this.orderStatus = status;
     },
-    sumTotalPrice: function(products) {
-      products.forEach((product) => {
-        this.totalPrice += product.price;
+    sumTotalPrice: function() {
+      Product.findAll({where: {this.id: orderId}})
+      .then((products) => {
+        products.forEach((product) => {
+          this.totalPrice += product.price;
+        })
+        return this.totalPrice;
       })
-      return this.totalPrice;
     },
     setOrderDate: function(date) {
       this.orderDate = date;
     }
   }
 )
-
-
-

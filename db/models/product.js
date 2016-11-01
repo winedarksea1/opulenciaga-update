@@ -31,5 +31,11 @@ module.exports = db.define('products', {
   }
 
 }, instanceMethods: {
-
+  changeQuantity: function(addOrRemove, number) {
+    if (addOrRemove === 'add') {
+      this.quantity += number
+    } else if (addOrRemove === 'remove') {
+      this.quantity -= number;
+    }
+  }
 })
