@@ -30,12 +30,15 @@ module.exports = db.define('products', {
     allowNull: false,
   }
 
-}, instanceMethods: {
+},
+{
+  instanceMethods: {
   changeQuantity: function(addOrRemove, number) {
     if (addOrRemove === 'add') {
-      this.quantity += number
+      this.quantity += number;
     } else if (addOrRemove === 'remove') {
       this.quantity -= number;
     }
   }
-})
+}
+});
