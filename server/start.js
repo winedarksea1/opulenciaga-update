@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const {resolve} = require('path')
 const passport = require('passport')
 const productRouter = require('./products');
+const orderRouter = require('./orders');
 
 // Bones has a symlink from node_modules/APP to the root of the app.
 // That means that we can require paths relative to the app root by
@@ -45,6 +46,8 @@ module.exports = app
   .use('/api', require('./api'))
 
   .use('/products', productRouter)
+
+  .use('/orders', orderRouter)
 
   // Send index.html for anything else.
   .get('/*', (req, res) => res.sendFile(resolve(__dirname, '..', 'public', 'index.html'))))
