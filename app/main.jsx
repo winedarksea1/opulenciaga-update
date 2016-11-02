@@ -10,5 +10,5 @@ render (
   <Provider store={store}>
     <Root/>
   </Provider>,
-  document.getElementById('main')
+  document.getElementById('submain')
 )

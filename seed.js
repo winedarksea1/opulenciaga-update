@@ -126,7 +126,6 @@ let products = [
 }
 ];
 
-
 db.sync({force: true})
 .then(function () {
   console.log("Dropped old data, now inserting data");

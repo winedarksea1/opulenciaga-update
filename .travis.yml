@@ -1,7 +1,0 @@
-language: node_js
-node_js:
-  - "6.1"
-deploy:
-  provider: heroku
-  app: opulenciaga # optional if it's the same as your repo name
-  api_key: "AfeNPCsevUOCVM3xh23ECn+hA7M3FiLJL3PuGcyglvUlPJX6uq8vVFyQ/1J5g5Lh4MwduL8aZ539VWlhpqAbTbzWn8E2StWahed7t787VtDfZtvKoht0YscaXicJ77T/Qb3w6XNYCv9LHTgpTi2G7swUUG/OG00LBNcva44qqHjZfaa2TwEKiDQpf7mhk3u8QF00ELwhMJC4obHznGRl+z9yjh53QBUPLk+JOaDtKiwJiDoA69YppV5oTD8cx6kBlDIparFUHXuv617b7QWWajYVBq4fUOv/dbUiLgVJR+B8nS8589CF3lFatzUW67kCSWl8eURKvreetYG6k3LwcawhWekmDGttpXZS3e5OLTxN63L550+DSjbxyyFXK7OrkaDZN1H3Zn8wejjb+NJ9ORGkTREgl8QBkY+0F9L9VKT4jo/FgFJiG+tQfCeELWma5+IVv4/wUAoZqbRpzXSW2JsDqQWS5WYfTG4+T6gbpKcKyaMWuePmlg+hJPcW9dkyANtp4VNGJc0SlWr9pPFZBuKFZ1wQSN/clTkPFdjcrHfmQp/RbVQTiUIt8huEtVVcYcPMIphD66HTf153an9u1mdwbmrfCfioyzB1fxEijo/o9qp2VdaFyuqLKOxApQN05UwAFz/AXfk5FmJLlFogWKZsuv8J5vy6vW/HY6cbCCU="
