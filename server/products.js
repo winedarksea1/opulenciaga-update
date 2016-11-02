@@ -21,9 +21,8 @@ router.get('/:category', function (req, res, next) {
   .catch(next);
 });
 
-router.get('/category/:productId', function (req, res, next) {
+router.get('/:category/:productId', function (req, res, next) {
   Product.findById(req.params.productId)
   .then(product => res.json(product))
   .catch(next);
 });
-
