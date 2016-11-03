@@ -1,5 +1,5 @@
 import  {RECEIVE_PRODUCTS } from '../constants';
-import axios from 'axios';
+//import axios from 'axios';
 
 
 //this is our action creator
@@ -20,4 +20,3 @@ export const fetchProducts = () =>
         console.log('here are products', products);
         dispatch(receiveProducts(products));
       });
-

@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import Products from '../containers/ProductsContainer';
-
-export default class Root extends Component {
-  render() {
-    return(
-      <Products />
-    )
-  }
-}
+// import React, { Component } from 'react';
+// import Products from '../containers/ProductsContainer';
+//
+// export default class Root extends Component {
+//   render() {
+//     return(
+//       <Products />
+//     )
+//   }
+// }
 
 
 

@@ -1,12 +1,9 @@
 import React from 'react';
 
 //get these from this.prop
-export default class ProductsComponent extends React.Component {
+export default class Products extends React.Component {
     constructor(props) {
       super(props);
-    }
-    componentDidMount(){
-      this.props.getProducts()
     }
 
     render() {
@@ -29,4 +26,3 @@ export default class ProductsComponent extends React.Component {
     }
 
 }
-
