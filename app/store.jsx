@@ -3,4 +3,6 @@ import rootReducer from './reducers'
 import creatLogger from 'redux-logger'
 import thunkMiddleware from 'redux-thunk'
 
-export default createStore(rootReducer, applyMiddleware(creatLogger(), thunkMiddleware))
+const store = createStore(rootReducer, applyMiddleware(creatLogger(), thunkMiddleware));
+window.store = store;
+export default store;
