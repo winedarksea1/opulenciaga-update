@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Category from '../containers/categoryContainer';
+import Products from '../containers/ProductContainer';
 
 export default class Root extends Component {
   render() {
     return(
-      <Category />
+      <Products />
     )
   }
 }
