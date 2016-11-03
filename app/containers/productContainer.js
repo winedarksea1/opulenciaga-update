@@ -1,16 +1,16 @@
-import {connect} from 'react-redux';
-import Products from '../components/Products';
-import {fetchProducts} from '../action-creators/Products';
+import { connect } from 'react-redux';
+import Product from '../components/Product';
+import { getProductById } from '../action-creators/Product';
 
-const mapStateToProps = ({products}) => ({
-  products
+const mapStateToProps = ({product}) => ({
+  product
 })
 
 const mapDispatchToProps = dispatch => ({
-  getProducts: () => dispatch(fetchProducts())
+  getProductById: () => dispatch(getProductById())
 })
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Products);
+)(Product);

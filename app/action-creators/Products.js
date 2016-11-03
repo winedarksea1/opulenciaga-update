@@ -1,9 +1,9 @@
-import  { RECEIVE_PRODUCTS } from '../constants';
+import  {RECEIVE_PRODUCTS } from '../constants';
+import axios from 'axios';
 
 
 //this is our action creator
-const receiveProducts = products=> {
-  console.log('in receiveProducts', products);
+export const receiveProducts = products=> {
   //return an object action, which has a type, and a payload
   return {
     type: RECEIVE_PRODUCTS,
