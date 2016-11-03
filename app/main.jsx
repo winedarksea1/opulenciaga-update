@@ -4,11 +4,11 @@ import {render} from 'react-dom'
 import { Provider } from 'react-redux'
 
 import store from './store'
-import Category from './components/category'
+import Root from './components/Root'
 
 render (
   <Provider store={store}>
-    <Category/>
+    <Root />
   </Provider>,
   document.getElementById('submain')
 )

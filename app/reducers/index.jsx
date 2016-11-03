@@ -1,11 +1,8 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
+import categories from './categories';
 
-const initialState = {}
+const rootReducer = combineReducers({
+  categories
+});
 
-const rootReducer = function(state = initialState, action) {
-  switch(action.type) {
-    default: return state
-  }
-};
-
-export default rootReducer
+export default rootReducer;

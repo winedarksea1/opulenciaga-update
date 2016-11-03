@@ -1,4 +1,14 @@
 import React, { Component } from 'react';
+import Category from '../containers/categoryContainer';
+
+export default class Root extends Component {
+  render() {
+    return(
+      <Category />
+    )
+  }
+}
+
 
 
 
