@@ -7,9 +7,9 @@ export const receiveProduct = product => {
   }
 }
 
-export const getProductById = (productId) =>
+export const getProductById = (category, productId) =>
   dispatch =>
-    fetch(`/products/${productId}`)
+    fetch(`/products/${category}/${productId}`)
       .then(res => res.json())
       .then(product => {
         dispatch(receiveProduct(product));

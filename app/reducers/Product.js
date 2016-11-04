@@ -1,6 +1,6 @@
 import {RECEIVE_PRODUCT} from '../constants';
 
-const initialProduct = [];
+const initialProduct = {};
 
 export default function product(state = initialProduct, action) {
     switch (action.type) {
