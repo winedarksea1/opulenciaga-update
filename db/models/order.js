@@ -17,6 +17,16 @@ module.exports = db.define('orders', {
     }
   },
   {
+  classMethods: {
+    getAllOrdersByUserId: function (userId) {
+      return Order.findAll(
+        {where: {user_id: userId}});
+    },
+    getAllOrdersByStatus: function (status) {
+      return Order.findAll({where:
+        {orderStatus: status}});
+    }
+  },
   instanceMethods: {
     changeStatus: function(status) {
       this.orderStatus = status;

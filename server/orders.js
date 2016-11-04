@@ -30,3 +30,11 @@ router.get('/allOrders/orderDate/:date', function (req, res, next) {
   .then(orders => res.json(orders))
   .catch(next);
 });
+
+router.get('/user/:userId/:orderStatus', function (req, res, next) {
+  User.findById(req.params.userId)
+  .then(user => user.getOrders())
+  .then(orders => orders.filter(order => order.orderStatus === req.params.orderStatus))
+  .then(ordersByStatus => res.json(ordersByStatus))
+  .catch(next);
+});
