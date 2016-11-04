@@ -13,11 +13,18 @@ export default class Products extends React.Component {
           <div className = 'row'>
           {
             this.props.products && this.props.products.map(product => (
-              <ul key = {product.id}>
-                <li>{product.name}</li>
-                <li>{product.description}</li>
-                <li>{product.price}</li>
-              </ul>
+              <div className = "col-sm-6 col-md-4" key = {product.id}>
+                <div className ="thumbnail">
+                  <img className = "productImage" src = {product.imgUrl} />
+                  <div className = "caption">
+                    <ul >
+                      <li>{product.name}</li>
+                      <li>{product.description}</li>
+                      <li>{product.price}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             ))
           }
           </div>
