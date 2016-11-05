@@ -16,28 +16,28 @@ export default class Navbar extends React.Component {
              </div>
              <ul className="nav navbar-nav">
                <li className="dropdown">
-                 <a className="dropdown-toggle" href="#"><Link to="/test">Shoelaces</Link></a>
+                 <a className="dropdown-toggle" href="#"><Link to="/shoelace">Shoelaces</Link></a>
                  <ul className="dropdown-menu">
                    <li><a href="#">For His Majesty</a></li>
                    <li><a href="#">For Her Majesty</a></li>
                  </ul>
                </li>
                <li className="dropdown">
-                 <a className="dropdown-toggle" href="#">Cufflinks</a>
+                 <a className="dropdown-toggle" href="#"><Link to="/cufflink">Cufflinks</Link></a>
                  <ul className="dropdown-menu">
                    <li><a href="#">For His Majesty</a></li>
                    <li><a href="#">For Her Majesty</a></li>
                  </ul>
                </li>
                <li className="dropdown">
-                 <a className="dropdown-toggle" href="#">Ties</a>
+                 <a className="dropdown-toggle" href="#"><Link to="/tie">Ties</Link></a>
                  <ul className="dropdown-menu">
                    <li><a href="#">For His Majesty</a></li>
                    <li><a href="#">For Her Majesty</a></li>
                  </ul>
                </li>
                <li className="dropdown">
-                 <a className="dropdown-toggle" href="#">Hats</a>
+                 <a className="dropdown-toggle" href="#"><Link to="/hat">Hats</Link></a>
                  <ul className="dropdown-menu">
                    <li><a href="#">For His Majesty</a></li>
                    <li><a href="#">For Her Majesty</a></li>

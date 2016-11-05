@@ -1,4 +1,4 @@
-import  {RECEIVE_PRODUCT } from '../constants';
+import  { RECEIVE_PRODUCT } from '../constants';
 
 export const receiveProduct = product => {
   return {
@@ -7,10 +7,13 @@ export const receiveProduct = product => {
   }
 }
 
-export const getProductById = (category, productId) =>
-  dispatch =>
+export const getProductById = (category, productId) => {
+  return dispatch => {
     fetch(`/products/${category}/${productId}`)
-      .then(res => res.json())
-      .then(product => {
-        dispatch(receiveProduct(product));
-      })
+    .then(res => res.json())
+    .then(product => {
+      dispatch(receiveProduct(product));
+    })
+    .catch(err => console.error(err));
+  };
+}

@@ -6,11 +6,11 @@ const mapStateToProps = ({product}) => ({
   product
 })
 
-const mapDispatchToProps = dispatch => ({
-  findProductById: () => dispatch(getProductById(category, productId))
-})
+// const mapDispatchToProps = dispatch => ({
+//   findProductById: () => dispatch(getProductById(category, productId))
+// })
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(Product);

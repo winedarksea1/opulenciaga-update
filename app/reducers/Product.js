@@ -1,4 +1,4 @@
-import {RECEIVE_PRODUCT} from '../constants';
+import { RECEIVE_PRODUCT } from '../constants';
 
 const initialProduct = {};
 
