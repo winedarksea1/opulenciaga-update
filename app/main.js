@@ -3,10 +3,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import App from './components/App';
+import Home from './components/Home';
 import { Router, hashHistory, Route, IndexRoute, IndexRedirect } from 'react-router';
 import {render} from 'react-dom'
 import {receiveProducts} from './action-creators/Products';
+import CategoryContainer from "./containers/CategoryContainer";
+import Carousel from "./components/Carousel";
+import ProductsContainer from "./containers/ProductsContainer";
 
 import store from './store'
 
@@ -30,11 +33,21 @@ const onAppEnter = function (nextRouterState) {
 render (
   <Provider store={store}>
     <Router history={hashHistory}>
-      <Route path="/" component={App} onEnter={onAppEnter}>
-
+      <Route path="/" component={Home}>
+        <IndexRedirect to="/home"/>
+        <Route path="/home" component={Carousel}/>
+        <Route path="/test" component={ProductsContainer}/>
 
       </Route>
     </Router>
   </Provider>,
   document.getElementById('submain')
 )
+
+
+
+
+// <Route path="/:categoryId" component = {CategoryContainer}/>
+//
+//
+//

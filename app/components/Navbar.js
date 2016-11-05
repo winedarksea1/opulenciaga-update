@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from "react-router";
 
 export default class Navbar extends React.Component {
     constructor(props) {
@@ -15,28 +16,28 @@ export default class Navbar extends React.Component {
              </div>
              <ul className="nav navbar-nav">
                <li className="dropdown">
-                 <a className="dropdown-toggle" href="#">oShoelaces</a>
+                 <a className="dropdown-toggle" href="#"><Link to="/test">Shoelaces</Link></a>
                  <ul className="dropdown-menu">
                    <li><a href="#">For His Majesty</a></li>
                    <li><a href="#">For Her Majesty</a></li>
                  </ul>
                </li>
                <li className="dropdown">
-                 <a className="dropdown-toggle" href="#">oCufflinks</a>
+                 <a className="dropdown-toggle" href="#">Cufflinks</a>
                  <ul className="dropdown-menu">
                    <li><a href="#">For His Majesty</a></li>
                    <li><a href="#">For Her Majesty</a></li>
                  </ul>
                </li>
                <li className="dropdown">
-                 <a className="dropdown-toggle" href="#">oTies</a>
+                 <a className="dropdown-toggle" href="#">Ties</a>
                  <ul className="dropdown-menu">
                    <li><a href="#">For His Majesty</a></li>
                    <li><a href="#">For Her Majesty</a></li>
                  </ul>
                </li>
                <li className="dropdown">
-                 <a className="dropdown-toggle" href="#">oHats</a>
+                 <a className="dropdown-toggle" href="#">Hats</a>
                  <ul className="dropdown-menu">
                    <li><a href="#">For His Majesty</a></li>
                    <li><a href="#">For Her Majesty</a></li>

@@ -10,11 +10,18 @@ import Footer from "./Footer";
 
 export default class App extends Component {
 
+  constructor(props) {
+    super(props)
+  }
+
   render() {
+
+    const { children } = this.props;
+
     return (
       <div>
         <Navbar />
-        <Carousel />
+        {children}
         <Footer />
       </div>
     )
