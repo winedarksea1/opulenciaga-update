@@ -8,7 +8,7 @@ module.exports = router;
 
 router.get('/:userId', function (req, res, next) {
   Order.findAll({where:{
-    id: req.params.userId
+    user_id: req.params.userId
   }})
   .then(orders => res.json(orders))
   .catch(next);
@@ -38,3 +38,44 @@ router.get('/user/:userId/:orderStatus', function (req, res, next) {
   .then(ordersByStatus => res.json(ordersByStatus))
   .catch(next);
 });
+
+router.post('/:userId/cart', function (req, res, next) {
+  Order.create(req.body)
+  .then(order => {
+    console.log(order);
+    return order.setUser(req.params.userId)
+  })
+  .then(order => res.json(order))
+  .catch(next);
+});
+
+router.put('/:userId/cart/:productId', function(req, res, next) {
+  User.findById(req.params.userId)
+  .then(user => user.getOrders({where: {orderStatus: "cart"}}))
+  .then(orders => {
+    const order = orders[0]
+    if (order) {
+      Product.findById(req.params.productId)
+      .then(product => {
+        console.log(product);
+        return order.addProduct(product)
+    })
+      .then(order => res.json(order))
+    } else {
+      return Order.create({
+        orderStatus: "cart"
+      })
+      .then(order => order.addProduct(req.params.productId))
+      .then(order => res.json(order))
+    }})
+});
+
+
+
+
+
+
+
+
+
+

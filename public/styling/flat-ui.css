@@ -6340,26 +6340,26 @@ ul.nav {
 .sabai {
    text-align: center;
    padding: 200px 0;
-   border-bottom: 1px #ebebeb  solid;
    opacity: 1;
-   transform: translateX(1400px);
+   transform: translateX(800px);
    transition: all 1.25s ease-out;
    padding-top: 0px;
+   overflow: hidden;
 }
 
 .sabai.from-right {
  opacity: 1;
- transform: translateX(400px);
+ transform: translateX(450px);
 }
 
 .second {
    text-align: center;
    padding: 200px 0;
-   border-bottom: 1px #ebebeb  solid;
    opacity: 1;
    transform: translateX(1600px);
    transition: all 1.25s ease-out;
    padding-top: 0px;
+   overflow: hidden;
 }
 
 .second.from-right {
@@ -6369,12 +6369,11 @@ ul.nav {
 
 .wineglass {
  text-align: center;
- padding: 200px 0 100px 0;
- border-bottom: 1px #ebebeb  solid;
+ padding: 0 0 100px 0;
  opacity: 1;
  transform: translateX(-1340px);
  transition: all 1.25s ease-out;
- padding-top: 0px;
+ overflow: hidden;
 }
 
 .wineglass.from-left {

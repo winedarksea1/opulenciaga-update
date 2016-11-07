@@ -22,7 +22,12 @@ let orders = [
 {
   orderStatus: "processing",
   totalPrice: 10.00,
-  orderDate: new Date()
+  orderDate: new Date(),
+},
+{
+  orderStatus: "cart",
+  totalPrice: 20.00,
+  orderDate: new Date(),
 }
 ];
 
@@ -45,7 +50,7 @@ let products = [
   category: "shoelace"
 },
 {
-  name: "red and blue mod",
+  name: "blue mod",
   price: 2000,
   imgUrl: "opulenciaga_images/perfume.png",
   description: "Blue with red stitching Dutch imports",

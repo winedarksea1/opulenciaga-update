@@ -6,11 +6,11 @@ const mapStateToProps = ({orders}) => ({
   orders
 })
 
-const mapDispatchToProps = dispatch => ({
-  getAllOrders: (userId) => dispatch(fetchAllOrders(uderId))
-})
+// const mapDispatchToProps = dispatch => ({
+//   getAllOrders: (userId) => dispatch(fetchAllOrders(uderId))
+// })
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(Orders);

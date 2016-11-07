@@ -39,11 +39,10 @@ export default class Category extends React.Component {
 
                  <div id="handcuffwine" className="second">
                      <div className='paragraphtext'>
-                       <h2>{category.length && category[2].name}</h2>
+                       <h2>{category.length && category[0].name}</h2>
                        <p>{category.length && category[2].description}</p>
                      </div>
                      <img src={category.length && category[2].imgUrl}/>
-
                  </div>
 
              </div>
