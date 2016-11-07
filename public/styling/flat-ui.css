@@ -6335,6 +6335,33 @@ ul.nav {
 }
 
 
+.sabai {
+   text-align: center;
+   padding: 200px 0;
+   border-bottom: 1px #ebebeb  solid;
+   opacity: 1;
+   transform: translateX(1400px);
+   transition: all 1s ease-out;
+}
+
+.sabai.from-right {
+ opacity: 1;
+ transform: translateX(500px);
+}
+
+.wineglass {
+ text-align: center;
+ padding: 200px 0;
+ border-bottom: 1px #ebebeb  solid;
+ opacity: 1;
+ transform: translateX(-1400px);
+ transition: all 1s ease-out;
+}
+
+.wineglass.from-left {
+ opacity: 1;
+ transform: translateX(-500px);
+}
 
 
 
