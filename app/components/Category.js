@@ -17,42 +17,37 @@ export default class Category extends React.Component {
      return(
 
 
-       <div>
-
-
-             <div id="main" className="main-container">
+             <div>
 
                  <div id="sabaiwine" className="sabai">
+                     <div className='paragraphtext'>
+                       <h2>{category.length && category[0].name}</h2>
+                       <p>{category.length && category[0].description}</p>
+                     </div>
                      <img src={category.length && category[0].imgUrl}/>
-                     <h2>Sabai Wine</h2>
-                     <p className="info">Move from the right</p>
+
                  </div>
 
                  <div id="wineglass" className="wineglass">
                      <img src={category.length && category[1].imgUrl}/>
-                     <h2>Blue Wine</h2>
-                     <p className="info">Move from left</p>
+                     <div className='paragraphtext'>
+                       <h2>{category.length && category[1].name}</h2>
+                       <p>{category.length && category[1].description}</p>
+                     </div>
+
                  </div>
 
-                 <div id="project03" className="project">
-                     <img src={category.length && category[0].imgUrl}/>
-                     <h2>Project Title</h2>
-                     <p className="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed.</p>
+                 <div id="handcuffwine" className="second">
+                     <div className='paragraphtext'>
+                       <h2>{category.length && category[2].name}</h2>
+                       <p>{category.length && category[2].description}</p>
+                     </div>
+                     <img src={category.length && category[2].imgUrl}/>
+
                  </div>
 
              </div>
 
-
-
-
-
-
-
-
-
-
-
-       </div>
    )
    }
 

@@ -39,7 +39,7 @@ let products = [
 {
   name: "yellow mod",
   price: 2000,
-  imgUrl: "opulenciaga_images/wineglass.png",
+  imgUrl: "opulenciaga_images/popcorn.png",
   description: "Yellow German imports",
   quantity: 3,
   category: "shoelace"
@@ -47,7 +47,7 @@ let products = [
 {
   name: "red and blue mod",
   price: 2000,
-  imgUrl: "opulenciaga_images/wine.png",
+  imgUrl: "opulenciaga_images/perfume.png",
   description: "Blue with red stitching Dutch imports",
   quantity: 3,
   category: "shoelace"

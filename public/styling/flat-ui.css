@@ -6292,7 +6292,7 @@ ul.nav {
 }
 
 #team {
-  height: 300px;
+  height: 400px;
   background-color: red;
 }
 
@@ -6341,28 +6341,57 @@ ul.nav {
    border-bottom: 1px #ebebeb  solid;
    opacity: 1;
    transform: translateX(1400px);
-   transition: all 1s ease-out;
+   transition: all 1.25s ease-out;
+   padding-top: 0px;
 }
 
 .sabai.from-right {
  opacity: 1;
- transform: translateX(500px);
+ transform: translateX(400px);
+}
+
+.second {
+   text-align: center;
+   padding: 200px 0;
+   border-bottom: 1px #ebebeb  solid;
+   opacity: 1;
+   transform: translateX(1600px);
+   transition: all 1.25s ease-out;
+   padding-top: 0px;
+}
+
+.second.from-right {
+ opacity: 1;
+ transform: translateX(400px);
 }
 
 .wineglass {
  text-align: center;
- padding: 200px 0;
+ padding: 200px 0 100px 0;
  border-bottom: 1px #ebebeb  solid;
  opacity: 1;
- transform: translateX(-1400px);
- transition: all 1s ease-out;
+ transform: translateX(-1340px);
+ transition: all 1.25s ease-out;
+ padding-top: 0px;
 }
 
 .wineglass.from-left {
  opacity: 1;
- transform: translateX(-500px);
+ transform: translateX(0px);
 }
 
+
+p,
+h2 {
+    max-width: 300px;
+    margin: left;
+    color: #294D67;
+}
+
+.paragraphtext {
+  display: inline-block;
+  margin: 0 100px 0 100px;
+}
 
 
 
