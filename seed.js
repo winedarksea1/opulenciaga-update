@@ -31,7 +31,7 @@ let products = [
 {
   name: "red mod",
   price: 2000,
-  imgUrl: "http://productshots3.modcloth.net/productshots/0171/5203/cbf963afd0c7061c77ac6f5760a023c7.jpg?1467322047",
+  imgUrl: "opulenciaga_images/sabaiwine.png",
   description: "Red German imports",
   quantity: 3,
   category: "shoelace"
@@ -39,7 +39,7 @@ let products = [
 {
   name: "yellow mod",
   price: 2000,
-  imgUrl: "http://productshots2.modcloth.net/productshots/0171/5187/e1d69a0bf7d4c5f33d08ecfadb00541b.jpg?1467321932",
+  imgUrl: "opulenciaga_images/wineglass.png",
   description: "Yellow German imports",
   quantity: 3,
   category: "shoelace"
@@ -47,7 +47,7 @@ let products = [
 {
   name: "red and blue mod",
   price: 2000,
-  imgUrl: "http://productshots2.modcloth.net/productshots/0171/5207/95877ba06758eb2c0f49669f87b5fd5b.jpg?1467322067",
+  imgUrl: "opulenciaga_images/wine.png",
   description: "Blue with red stitching Dutch imports",
   quantity: 3,
   category: "shoelace"
