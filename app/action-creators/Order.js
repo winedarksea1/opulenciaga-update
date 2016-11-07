@@ -14,7 +14,7 @@ const removeFromCart = product => {
   }
 }
 
-export default const fetchAndAddProductToOrder = (category, productId) => {
+export const fetchAndAddProductToOrder = (category, productId) => {
   dispatch =>
     fetch(`/products/${category}/${productId}`)
       .then(res => res.json)
@@ -22,7 +22,7 @@ export default const fetchAndAddProductToOrder = (category, productId) => {
       .catch(err => console.error(err));
 }
 
-export default const removeProductFromOrder = (category, productId) => {
+export const removeProductFromOrder = (category, productId) => {
   dispatch =>
     fetch(`/products/${category}/${productId}`)
       .then(res => res.json)

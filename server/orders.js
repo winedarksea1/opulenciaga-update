@@ -8,7 +8,7 @@ module.exports = router;
 
 router.get('/:userId', function (req, res, next) {
   Order.findAll({where:{
-    id: req.params.userId
+    user_id: req.params.userId
   }})
   .then(orders => res.json(orders))
   .catch(next);
@@ -38,3 +38,5 @@ router.get('/user/:userId/:orderStatus', function (req, res, next) {
   .then(ordersByStatus => res.json(ordersByStatus))
   .catch(next);
 });
+
+
