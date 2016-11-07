@@ -367,11 +367,11 @@ body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.72222;
-  color: #34495e;
+  color: #ffffff;
   background-color: #ffffff;
 }
 a {
-  color: #16a085;
+  color: ##ffffff;
   text-decoration: none;
   -webkit-transition: .25s;
           transition: .25s;
@@ -6244,6 +6244,7 @@ ul.nav {
 
 .navbar-nav > li > a {
   font-size: 14px;
+  color: #ffffff;
   padding: 15px 21px;
   line-height: 23px;
   font-weight: 500;
@@ -6305,5 +6306,37 @@ ul.nav {
   text-align: center;
   padding: 20px 0 0 0;
 }
+
+#navbar {
+  height: 42px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#navbarButtons > ul {
+  text-align: center;
+  padding: 7px 0 0 0;
+}
+
+#navbarButtons > ul li {
+  display: inline-block;
+  list-style: none;
+  font-family: Helvetica;
+  font-size: 14px;
+  padding: 0 25px 0 25px;
+}
+
+#navbarButtons > ul li a {
+  color: rgb(235, 235, 235);
+}
+
+#navbarButtons > ul li a:hover {
+  color: rgb(192, 192, 192);
+  background-color: transparent;
+}
+
+
+
+
+
 
 /*# sourceMappingURL=flat-ui.css.map */
