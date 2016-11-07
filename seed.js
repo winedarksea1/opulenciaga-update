@@ -45,7 +45,7 @@ let products = [
   category: "shoelace"
 },
 {
-  name: "red and blue mod",
+  name: "blue mod",
   price: 2000,
   imgUrl: "opulenciaga_images/perfume.png",
   description: "Blue with red stitching Dutch imports",
