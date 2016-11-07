@@ -22,7 +22,12 @@ let orders = [
 {
   orderStatus: "processing",
   totalPrice: 10.00,
-  orderDate: new Date()
+  orderDate: new Date(),
+},
+{
+  orderStatus: "cart",
+  totalPrice: 20.00,
+  orderDate: new Date(),
 }
 ];
 

@@ -6,7 +6,7 @@ const Product = require('./product');
 module.exports = db.define('orders', {
     orderStatus: {
       type: Sequelize.STRING,
-      defaultValue: "currentCart"
+      defaultValue: "cart"
     },
     totalPrice: {
       type: Sequelize.DOUBLE,
