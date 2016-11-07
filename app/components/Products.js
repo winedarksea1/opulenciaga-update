@@ -16,10 +16,11 @@ export default class Products extends React.Component {
                 <div className ="thumbnail">
                   <img className = "productImage" src = {product.imgUrl} />
                   <div className = "caption">
-                    <ul >
+                    <ul>
                       <li>{product.name}</li>
                       <li>{product.description}</li>
                       <li>{product.price}</li>
+                      <li>{product.quantity}</li>
                     </ul>
                   </div>
                 </div>

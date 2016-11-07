@@ -23,6 +23,7 @@ export default class Product extends React.Component {
                      <li>{product.name}</li>
                      <li>{product.description}</li>
                      <li>{product.price}</li>
+                     <li>{product.quantity}</li>
                    </ul>
                  </div>
                </div>
