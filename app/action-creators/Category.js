@@ -1,4 +1,5 @@
 import { RECEIVE_CATEGORY } from '../constants';
+//import axios from 'axios';
 
 export const receiveCategory = category => {
  return {

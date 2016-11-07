@@ -18,6 +18,7 @@ import { getProductById } from "./action-creators/Product";
 import { fetchAllOrders } from './action-creators/Orders';
 
 import store from './store'
+import axios from 'axios';
 
 const onLoad = function (products) {
   const productsAction = receiveProducts(products);

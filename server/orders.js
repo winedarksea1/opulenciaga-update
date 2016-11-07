@@ -52,7 +52,8 @@ router.post('/:userId/cart', function (req, res, next) {
 router.put('/:userId/cart/:productId', function(req, res, next) {
   User.findById(req.params.userId)
   .then(user => user.getOrders({where: {orderStatus: "cart"}}))
-  .then(order => {
+  .then(orders => {
+    const order = orders[0]
     if (order) {
       Product.findById(req.params.productId)
       .then(product => {
@@ -61,7 +62,7 @@ router.put('/:userId/cart/:productId', function(req, res, next) {
     })
       .then(order => res.json(order))
     } else {
-      return order.create({
+      return Order.create({
         orderStatus: "cart"
       })
       .then(order => order.addProduct(req.params.productId))
