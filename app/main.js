@@ -11,6 +11,7 @@ import CategoryContainer from "./containers/CategoryContainer";
 import Carousel from "./components/Carousel";
 import ProductsContainer from "./containers/ProductsContainer";
 import ProductContainer from "./containers/ProductContainer";
+import Account from "./components/Account";
 import { getCategory } from "./action-creators/Category";
 import { getProductById } from "./action-creators/Product";
 
@@ -61,9 +62,10 @@ render (
       <Route path="/" component={Home}>
         <IndexRedirect to="/home"/>
         <Route path="/home" component={Carousel}/>
+        <Route path="/account" component={Account}/>
+        <Route path="/cart" component={}/>
         <Route path="/:category" component={CategoryContainer} onEnter={onCategoryEnter}/>
         <Route path="/:category/:productId" component={ProductContainer} onEnter={onProductEnter}/>
-
       </Route>
     </Router>
   </Provider>,

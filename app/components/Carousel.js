@@ -18,7 +18,7 @@ export default class Carousel extends React.Component {
 
             <div className="carousel-inner" role="listbox">
               <div className="item active">
-                <img src="test1.png" alt="Chania"/>
+                <img src="finalImages/sabaiwine.png" alt="Chania"/>
                 <div className="carousel-caption">
                   <h3>Test</h3>
                   <p>The most beautiful test in the world.</p>
@@ -26,7 +26,7 @@ export default class Carousel extends React.Component {
               </div>
 
               <div className="item">
-                <img src="test2.jpg" alt="Chania"/>
+                <img src="finalImages/perfume.png" alt="Chania"/>
                 <div className="carousel-caption">
                   <h3>Test</h3>
                   <p>The most beautiful test in the world.</p>
@@ -34,7 +34,7 @@ export default class Carousel extends React.Component {
               </div>
 
               <div className="item">
-                <img src="test3.jpg" alt="Flower"/>
+                <img src="finalImages/goldwatch.png" alt="Flower"/>
                 <div className="carousel-caption">
                   <h3>Test</h3>
                   <p>The most beautiful test in the world.</p>
@@ -42,7 +42,7 @@ export default class Carousel extends React.Component {
               </div>
 
               <div className="item">
-                <img src="test4.jpg" alt="Flower"/>
+                <img src="finalImages/vcarpels.png" alt="Flower"/>
                 <div className="carousel-caption">
                   <h3>Test</h3>
                   <p>The most beautiful test in the world.</p>
@@ -66,22 +66,22 @@ export default class Carousel extends React.Component {
             <ul>
               <li className="col-md-3">
                 <figure>
-                  <img src="http://images.apple.com/ac/flags/1/images/us/16.png"/>
+                  <img src="finalImages/clemsrs.png"/>
                   <figcaption>Clement Mihailescu</figcaption>
                 </figure></li>
               <li className="col-md-3">
                 <figure>
-                  <img src="http://images.apple.com/ac/flags/1/images/us/16.png"/>
+                  <img src="finalImages/jamessrs.png"/>
                   <figcaption>James Kim</figcaption>
                 </figure></li>
               <li className="col-md-3">
                 <figure>
-                  <img src="http://images.apple.com/ac/flags/1/images/us/16.png"/>
+                  <img src="finalImages/andysrs.png"/>
                   <figcaption>Andrew McGovern</figcaption>
                 </figure></li>
               <li className="col-md-3">
                 <figure>
-                  <img src="http://images.apple.com/ac/flags/1/images/us/16.png"/>
+                  <img src="finalImages/winstonsrs.png"/>
                   <figcaption>Winston Wang</figcaption>
                 </figure></li>
             </ul>
