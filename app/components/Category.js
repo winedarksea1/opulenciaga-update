@@ -21,9 +21,9 @@ export default class Category extends React.Component {
 
                  <div id="sabaiwine" className="sabai">
                      <div className='paragraphtext'>
-                       { category.length ? <Link to={`${category[0].category}/${category[0].id}`}><h2>{category.length && category[0].name}</h2></Link> : <div></div> }
+                       <h2>{category.length && category[0].name}</h2>
                        <p>{category.length && category[0].description}</p>
-                       <p>Learn More</p>
+                       { category.length ? <Link to={`${category[0].category}/${category[0].id}`}><p id="learnMore">Learn More</p></Link> : <div></div> }
                      </div>
                      <img src={category.length && category[0].imgUrl}/>
 
@@ -32,16 +32,18 @@ export default class Category extends React.Component {
                  <div id="wineglass" className="wineglass">
                      <img src={category.length && category[1].imgUrl}/>
                      <div className='paragraphtext'>
-                       { category.length ? <Link to={`${category[1].category}/${category[1].id}`}><h2>{category.length && category[1].name}</h2></Link> : <div></div> }
+                       <h2>{category.length && category[1].name}</h2>
                        <p>{category.length && category[1].description}</p>
+                       { category.length ? <Link to={`${category[0].category}/${category[0].id}`}><p id="learnMore">Learn More</p></Link> : <div></div> }
                      </div>
 
                  </div>
 
                  <div id="handcuffwine" className="second">
                      <div className='paragraphtext'>
-                       { category.length ? <Link to={`${category[2].category}/${category[2].id}`}><h2>{category.length && category[2].name}</h2></Link> : <div></div> }
+                       <h2>{category.length && category[2].name}</h2>
                        <p>{category.length && category[2].description}</p>
+                       { category.length ? <Link to={`${category[0].category}/${category[0].id}`}><p id="learnMore">Learn More</p></Link> : <div></div> }
                      </div>
                      <img src={category.length && category[2].imgUrl}/>
 

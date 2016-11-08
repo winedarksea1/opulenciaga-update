@@ -16,6 +16,10 @@ module.exports = db.define('orders', {
       type: Sequelize.DATE
     },
     currentProducts: {
+      type: Sequelize.ARRAY(Sequelize.STRING),
+      defaultValue: []
+    },
+    currentPrices: {
       type: Sequelize.ARRAY(Sequelize.INTEGER),
       defaultValue: []
     }
@@ -47,8 +51,12 @@ module.exports = db.define('orders', {
     setOrderDate: function(date) {
       this.orderDate = date;
     },
-    addNewProduct: function(productId) {
-      this.currentProducts.push(productId);
+    addNewProduct: function(product) {
+      return this.set({currentProducts: [...this.currentProducts, product]});
+      //return Object.assign({}, this, {currentProducts: [...this.currentProducts, productId]});
+    },
+    addNewPrice: function(price) {
+      return this.set({currentPrices: [...this.currentPrices, price]});
     }
   }
   });

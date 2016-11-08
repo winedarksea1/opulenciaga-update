@@ -16,10 +16,12 @@ export default class Product extends React.Component {
        <div>
          <div className = 'row'>
          {
-             <div className = "col-sm-6 col-md-4" key = {product.id}>
-               <div className ="thumbnail">
-                 <img className = "productImage" src = {product.imgUrl} />
-                 <div className = "caption">
+           <div>
+            <div className="col-sm-6 col-md-3"></div>
+             <div className="col-sm-6 col-md-3" key = {product.id}>
+               <div className="thumbnail">
+                 <img className="productImage" src = {product.imgUrl} />
+                 <div className="caption">
                    <ul >
                      <li>Name: {product.name}</li>
                      <li>Description: {product.description}</li>
@@ -30,6 +32,8 @@ export default class Product extends React.Component {
                  </div>
                </div>
              </div>
+              <div className="col-sm-6 col-md-3"></div>
+            </div>
          }
          </div>
        </div>

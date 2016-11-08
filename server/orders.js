@@ -78,9 +78,13 @@ router.put('/:userId/cart/:productId', function(req, res, next) {
       // .then(order => {
       //   console.log("Clicking add to cart multiple times: ", order)
         console.log("Cart already created", order)
-        order.addNewProduct(req.params.productId);
-        return order.save()
-        .then(order => res.json(order))
+        return Product.findById(req.params.productId)
+        .then(product => {
+          order.addNewProduct(product.name);
+          order.addNewPrice(product.price);
+          return order.save()
+          .then(order => res.json(order))
+        })
         // res.json(order)
       // }
       // catch(err => console.error(err));
@@ -97,11 +101,17 @@ router.put('/:userId/cart/:productId', function(req, res, next) {
       //   return Order.findById(order[0][0].order_id);
       //   //return order[0][0];
       // })
+
+
       .then(order => {
         console.log("Creating cart: ", order)
-        order.addNewProduct(req.params.productId);
-        return order.save()
-        .then(order => res.json(order))
+        return Product.findById(req.params.productId)
+        .then(product => {
+          order.addNewProduct(product.name);
+          order.addNewPrice(product.price);
+          return order.save()
+          .then(order => res.json(order))
+        })
         // res.json(order)
       });
     }})

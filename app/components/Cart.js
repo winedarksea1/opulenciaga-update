@@ -27,29 +27,40 @@ export default class Cart extends React.Component {
                           <th></th>
                         </tr>
         					</thead>
-        					<tbody>
-        						<tr>
-        							<td data-th="Product">
-        								<div className="row">
-        									<div className="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." className="img-responsive"/></div>
-        									<div className="col-sm-10">
-        										<h4 className="nomargin">Product 1</h4>
-                            <div>{order.currentProducts && order.currentProducts[0]}</div>
-        										<p>{order.currentProducts && order.currentProducts[0]}</p>
-        									</div>
-        								</div>
-        							</td>
-        							<td data-th="Price">$1.99</td>
-        							<td data-th="Quantity">
-        								<input type="number" className="form-control text-center" value="1"/>
-        							</td>
-        							<td data-th="Subtotal" className="text-center">1.99</td>
-        							<td className="actions" data-th="">
-        								<button className="btn btn-info btn-sm"><i className="fa fa-refresh"></i></button>
-        								<button className="btn btn-danger btn-sm"><i className="fa fa-trash-o"></i></button>
-        							</td>
-        						</tr>
-        					</tbody>
+                { order.currentProducts ? order.currentProducts.map((product, index, array) => {
+                  return <tbody>
+                  <tr>
+                  <td data-th="Product">
+                  <div className="row">
+                  <div className="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." className="img-responsive"/></div>
+                  <div className="col-sm-10">
+                  <h4 className="nomargin">Product {index + 1}</h4>
+                  <div>{product}</div>
+                  <p>{product}</p>
+                  </div>
+                  </div>
+                  </td>
+                  <td data-th="Price">${order.currentPrices[index]}.00</td>
+                  <td data-th="Quantity">
+                  <input type="number" className="form-control text-center" value="1"/>
+                  </td>
+                  <td data-th="Subtotal" className="text-center"></td>
+                  <td className="actions" data-th="">
+                  <button className="btn btn-info btn-sm"><i className="fa fa-refresh"></i></button>
+                  <button className="btn btn-danger btn-sm"><i className="fa fa-trash-o"></i>Remove</button>
+                  </td>
+                  </tr>
+                  </tbody>
+
+                }) : <tbody>
+                        <tr>
+                          <td data-th="Product">
+                          <h4 className="nomargin">Your shopping bag is empty.</h4>
+                          </td>
+                        </tr>
+                    </tbody>
+
+              }
         					<tfoot>
         						<tr className="visible-xs">
         							<td className="text-center"><strong>Total 1.99</strong></td>
@@ -57,7 +68,7 @@ export default class Cart extends React.Component {
         						<tr>
         							<td><a href="#" className="btn btn-warning"><i className="fa fa-angle-left"></i> Continue Shopping</a></td>
         							<td colspan="2" className="hidden-xs"></td>
-        							<td className="hidden-xs text-center"><strong>Total $1.99</strong></td>
+        							<td className="hidden-xs text-center"><strong>Total ${order.currentPrices && order.currentPrices.reduce((a, b) => a + b) || 0}.00</strong></td>
         							<td><a href="#" className="btn btn-success btn-block">Checkout <i className="fa fa-angle-right"></i></a></td>
         						</tr>
         					</tfoot>

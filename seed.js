@@ -34,26 +34,26 @@ let orders = [
 
 let products = [
 {
-  name: "red mod",
-  price: 2000,
+  name: "Sabai Acai",
+  price: 9001,
   imgUrl: "opulenciaga_images/sabaiwine.png",
-  description: "Red German imports",
-  quantity: 3,
+  description: "The wine of the Gods. Earthy and full-bodied.",
+  quantity: 1,
   category: "shoelace"
 },
 {
-  name: "yellow mod",
-  price: 2000,
-  imgUrl: "opulenciaga_images/popcorn.png",
-  description: "Yellow German imports",
-  quantity: 3,
+  name: "Aqua Vino",
+  price: 420,
+  imgUrl: "opulenciaga_images/wineglass.png",
+  description: "Crisp, flavorless, gluten-free, non-alcoholic, vegan-friendly, atheist-approved wine. The perfect conversation starter for attack helicopters.",
+  quantity: 10,
   category: "shoelace"
 },
 {
-  name: "blue mod",
-  price: 2000,
-  imgUrl: "opulenciaga_images/perfume.png",
-  description: "Blue with red stitching Dutch imports",
+  name: "Handcuff Red Wine",
+  price: 1999,
+  imgUrl: "opulenciaga_images/wine.png",
+  description: "Dangerously delicious. Not for the faint of heart.",
   quantity: 3,
   category: "shoelace"
 },

@@ -19,7 +19,7 @@ export default class Account extends React.Component {
                  <input type='submit' placeholder='signup' />
                </form>
             </div>
-            <div id="logintext">Already opulent? Carry on being opulent.</div>
+            <div id="logintext">Already a member? Carry on being opulent.</div>
             <div id="login" class='signup'>
                <form>
                  <input type='text' placeholder='Email:'  />

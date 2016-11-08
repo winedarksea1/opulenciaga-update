@@ -18,34 +18,34 @@ export default class Carousel extends React.Component {
 
             <div className="carousel-inner" role="listbox">
               <div className="item active">
-                <img src="finalImages/sabaiwine.png" alt="Chania"/>
-                <div className="carousel-caption">
-                  <h3>Test</h3>
-                  <p>The most beautiful test in the world.</p>
-                </div>
-              </div>
-
-              <div className="item">
                 <img src="finalImages/perfume.png" alt="Chania"/>
                 <div className="carousel-caption">
-                  <h3>Test</h3>
-                  <p>The most beautiful test in the world.</p>
+                  <h3 id="carouselTitleOne">Flowerbomb</h3>
+                  <p id="carouselDescOne">A splash of luxury.</p>
                 </div>
               </div>
 
               <div className="item">
-                <img src="finalImages/goldwatch.png" alt="Flower"/>
+                <img src="finalImages/sabaiwine.png" alt="Chania"/>
                 <div className="carousel-caption">
-                  <h3>Test</h3>
-                  <p>The most beautiful test in the world.</p>
+                  <h3 id="carouselTitleTwo">Sabai Acai</h3>
+                  <p id="carouselDescTwo">Truly one of a kind.</p>
                 </div>
               </div>
 
               <div className="item">
                 <img src="finalImages/vcarpels.png" alt="Flower"/>
                 <div className="carousel-caption">
-                  <h3>Test</h3>
-                  <p>The most beautiful test in the world.</p>
+                  <h3 id="carouselTitleThree">iRing</h3>
+                  <p id="carouselDescThree">For the daring.</p>
+                </div>
+              </div>
+
+              <div className="item">
+                <img src="finalImages/goldwatch.png" alt="Flower"/>
+                <div className="carousel-caption">
+                  <h3 id="carouselTitleFour">Goldwatch</h3>
+                  <p id="carouselDescFour">When all you want is gold.</p>
                 </div>
               </div>
             </div>

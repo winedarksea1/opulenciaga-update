@@ -6300,13 +6300,15 @@ ul.nav {
   display: inline-block;
   list-style: none;
   padding: 75px 0 0 0;
-  color: red;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Helvetica;
 }
 
 #quote {
   text-align: center;
   padding: 20px 0 0 0;
-  color: red;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Helvetica;
 }
 
 #navbar {
@@ -6405,7 +6407,7 @@ h2 {
   text-align: center;
   font-size: 30px;
   color: rgba(0, 0, 0, 0.8);
-  padding: 20px 0 10px 0;
+  padding: 50px 0 10px 0;
 }
 
 /*body {
@@ -6483,11 +6485,11 @@ p {
 
 span {
   font-size: .75em;
-  background-color: white;
+  /*background-color: white;*/
   padding: 2px 5px;
   color: rgba(0,0,0,.6);
   border-radius: 2px;
-  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  /*box-shadow: 1px 1px 1px rgba(0,0,0,.3);*/
   margin: 5px;
 }
 
@@ -6580,4 +6582,87 @@ td {
   border-radius: 0px;
 }
 
+.btn {
+  border-radius: 0px;
+}
+
+.btn-danger {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#carouselTitleOne {
+  /*padding: 0 650px 650px 0;*/
+  position: fixed;
+  top: 100px;
+  left: 400px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#carouselDescOne {
+  position: fixed;
+  top: 150px;
+  left: 450px;
+  color: rgba(0, 0, 0, 0.8);
+
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#carouselTitleTwo {
+  /*padding: 0 650px 650px 0;*/
+  position: fixed;
+  top: 200px;
+  left: 900px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#carouselDescTwo {
+  position: fixed;
+  top: 250px;
+  left: 850px;
+  color: rgba(0, 0, 0, 0.8);
+
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#carouselTitleThree {
+  /*padding: 0 650px 650px 0;*/
+  position: fixed;
+  top: 200px;
+  left: 500px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#carouselDescThree {
+  position: fixed;
+  top: 250px;
+  left: 550px;
+  color: rgba(0, 0, 0, 0.8);
+
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#carouselTitleFour {
+  /*padding: 0 650px 650px 0;*/
+  position: fixed;
+  top: 250px;
+  left: 1000px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#carouselDescFour {
+  position: fixed;
+  top: 300px;
+  left: 950px;
+  color: rgba(0, 0, 0, 0.8);
+
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#learnMore {
+  color: #0070c9;
+}
+
+.paragraphtext > h2 {
+  color: rgba(0, 0, 0, 0.8);
+}
 /*# sourceMappingURL=flat-ui.css.map */
