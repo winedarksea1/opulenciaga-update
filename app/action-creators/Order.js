@@ -16,28 +16,33 @@ const removeFromCart = product => {
 }
 
 export const fetchAndAddProductToOrder = (userId, productId) => {
-  dispatch =>
-    axios.put(`/products/${userId}/cart/${productId}`)
+  dispatch => {
+    axios.put(`/orders/${userId}/cart/${productId}`)
       .then(res => {
         console.log(res);
         res.json()
       })
       .then(product => { addToCart(product) })
       .catch(err => console.error(err));
+  }
 }
 
 export const createCartAndAddProductToOrder = (userId, productId) => {
-  dispatch =>
-    axios.post(`/products/${userId}/cart`)
+  console.log('hi', userId, productId);
+  dispatch => {
+    axios.post(`/orders/${userId}/cart`)
       .then(order => {
-        axios.put(`/products/${userId}/cart/${productId}`)
+        console.log('wtf clem?');
+        axios.put(`/orders/${userId}/cart/${productId}`)
         .then(res => {
+          console.log('winstonnnnn');
           res.json()
         })
         .then(product => { addToCart(product) })
         .catch(err => console.error(err));
       })
       .catch(err => console.error(err));
+  }
 }
 
 export const removeProductFromOrder = (category, productId) => {

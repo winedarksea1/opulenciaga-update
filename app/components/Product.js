@@ -10,7 +10,7 @@ export default class Product extends React.Component {
    render() {
 
      const { product, addProductToCart, createCartAndAddProductToCart } = this.props;
-
+     console.log("KENNETH PLEAE: ", product)
 
      return(
        <div>
