@@ -40,7 +40,9 @@ router.get('/user/:userId/:orderStatus', function (req, res, next) {
 });
 
 router.post('/:userId/cart', function (req, res, next) {
-  Order.create(req.body)
+  Order.create({
+    orderStatus: "cart"
+  })
   .then(order => {
     console.log(order);
     return order.setUser(req.params.userId)
@@ -50,32 +52,58 @@ router.post('/:userId/cart', function (req, res, next) {
 });
 
 router.put('/:userId/cart/:productId', function(req, res, next) {
-  User.findById(req.params.userId)
-  .then(user => user.getOrders({where: {orderStatus: "cart"}}))
-  .then(orders => {
-    const order = orders[0]
+  console.log("are we hitting this route");
+  Order.findOne({
+    where: {
+      user_id: req.params.userId
+    }
+  })
+  // .then(user => user.getOrders({where: {orderStatus: "cart"}}))
+  .then(order => {
+    // const order = orders[0]
     if (order) {
-      Product.findById(req.params.productId)
-      .then(product => {
-        console.log(product);
-        return order.addProduct(product)
-    })
-      .then(order => res.json(order))
+      // console.log("ORDER", order);
+      // Product.findById(req.params.productId)
+      // .then(product => {
+      //   console.log("PRODUCT", product);
+      //   console.log("product id", product.id)
+      //   console.log("order", order);
+      //   return order.addProduct(product.id)
+      // })
+      // .then(order => {
+      //   console.log("INSIDE", order)
+      //   return Order.findById(order[0][0].order_id);
+      //   //return order[0][0];
+      // })
+      // .then(order => {
+      //   console.log("Clicking add to cart multiple times: ", order)
+        console.log("Cart already created", order)
+        order.addNewProduct(req.params.productId);
+        return order.save()
+        .then(order => res.json(order))
+        // res.json(order)
+      // }
+      // catch(err => console.error(err));
     } else {
       return Order.create({
-        orderStatus: "cart"
+        orderStatus: "cart",
+        user_id: req.params.userId
       })
-      .then(order => order.addProduct(req.params.productId))
-      .then(order => res.json(order))
+      // .then(order => {
+      //   return order.addProduct(req.params.productId)
+      // })
+      // .then(order => {
+      //   console.log("before creating cart: ", order[0][0])
+      //   return Order.findById(order[0][0].order_id);
+      //   //return order[0][0];
+      // })
+      .then(order => {
+        console.log("Creating cart: ", order)
+        order.addNewProduct(req.params.productId);
+        return order.save()
+        .then(order => res.json(order))
+        // res.json(order)
+      });
     }})
+    .catch(err => console.error(err));
 });
-
-
-
-
-
-
-
-
-
-

@@ -14,6 +14,10 @@ module.exports = db.define('orders', {
     },
     orderDate: {
       type: Sequelize.DATE
+    },
+    currentProducts: {
+      type: Sequelize.ARRAY(Sequelize.INTEGER),
+      defaultValue: []
     }
   },
   {
@@ -25,7 +29,7 @@ module.exports = db.define('orders', {
     getAllOrdersByStatus: function (status) {
       return Order.findAll({where:
         {orderStatus: status}});
-    }
+    },
   },
   instanceMethods: {
     changeStatus: function(status) {
@@ -42,6 +46,9 @@ module.exports = db.define('orders', {
     },
     setOrderDate: function(date) {
       this.orderDate = date;
+    },
+    addNewProduct: function(productId) {
+      this.currentProducts.push(productId);
     }
   }
   });

@@ -23,6 +23,7 @@ export default class Category extends React.Component {
                      <div className='paragraphtext'>
                        { category.length ? <Link to={`${category[0].category}/${category[0].id}`}><h2>{category.length && category[0].name}</h2></Link> : <div></div> }
                        <p>{category.length && category[0].description}</p>
+                       <p>Learn More</p>
                      </div>
                      <img src={category.length && category[0].imgUrl}/>
 

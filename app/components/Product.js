@@ -21,12 +21,11 @@ export default class Product extends React.Component {
                  <img className = "productImage" src = {product.imgUrl} />
                  <div className = "caption">
                    <ul >
-                     <li>{product.name}</li>
-                     <li>{product.description}</li>
-                     <li>{product.price}</li>
-                     <li>{product.quantity}</li>
+                     <li>Name: {product.name}</li>
+                     <li>Description: {product.description}</li>
+                     <li>Price: {product.price}</li>
+                     <li>Quantity: {product.quantity}</li>
                      <li><button onClick={() => addProductToCart(1, product.id)}>Add to cart!</button></li>
-                     <li><button onClick={() => createCartAndAddProductToCart(1, product.id)}>Create cart!</button></li>
                    </ul>
                  </div>
                </div>
@@ -38,3 +37,7 @@ export default class Product extends React.Component {
    }
 
 }
+
+
+
+// <li><button onClick={() => createCartAndAddProductToCart(1, product.id)}>Create cart!</button></li>

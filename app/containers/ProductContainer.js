@@ -8,7 +8,10 @@ const mapStateToProps = ({product}) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  addProductToCart: (userId, productId) => dispatch(fetchAndAddProductToOrder(userId, productId)),
+  addProductToCart: (userId, productId) => {
+    console.log("Are we adding to cart?")
+    dispatch(fetchAndAddProductToOrder(userId, productId));
+  },
   createCartAndAddProductToCart: (userId, productId) => dispatch(createCartAndAddProductToOrder(userId, productId)),
   findProductById: () => dispatch(getProductById(category, productId))
 })
