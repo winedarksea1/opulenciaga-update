@@ -1,4 +1,5 @@
-import { ADD_PRODUCT_TO_ORDER, REMOVE_PRODUCT_FROM_ORDER, CHECKOUT_ORDER } from './constants';
+import { ADD_PRODUCT_TO_ORDER, REMOVE_PRODUCT_FROM_ORDER, CHECKOUT_ORDER } from '../constants';
+import axios from "axios";
 
 const addToCart = product => {
   return {
@@ -16,8 +17,11 @@ const removeFromCart = product => {
 
 export const fetchAndAddProductToOrder = (category, productId) => {
   dispatch =>
-    fetch(`/products/${category}/${productId}`)
-      .then(res => res.json)
+    axios.put(`/products/${category}/${productId}`)
+      .then(res => {
+        console.log(res);
+        res.json
+      })
       .then(product =>{ addToCart(product)})
       .catch(err => console.error(err));
 }

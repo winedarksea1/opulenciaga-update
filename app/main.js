@@ -11,12 +11,9 @@ import CategoryContainer from "./containers/CategoryContainer";
 import Carousel from "./components/Carousel";
 import ProductsContainer from "./containers/ProductsContainer";
 import ProductContainer from "./containers/ProductContainer";
-<<<<<<< HEAD
 import Account from "./components/Account";
-=======
 import OrdersContainer from './containers/OrdersContainer';
-
->>>>>>> fa2e15cf2d50764a4296febf642d7cd520c8a6b4
+//import CartContainer from "./containers/CartContainer";
 import { getCategory } from "./action-creators/Category";
 import { getProductById } from "./action-creators/Product";
 import { fetchAllOrders } from './action-creators/Orders';
@@ -78,7 +75,6 @@ render (
         <IndexRedirect to="/home"/>
         <Route path="/home" component={Carousel}/>
         <Route path="/account" component={Account}/>
-        <Route path="/cart" component={}/>
         <Route path="/:category" component={CategoryContainer} onEnter={onCategoryEnter}/>
         <Route path="/:category/:productId" component={ProductContainer} onEnter={onProductEnter}/>
         <Route path="/orders/user/:userId" component={OrdersContainer} onEnter={onOrdersEnter}/>
@@ -95,3 +91,6 @@ render (
 //
 //
 //
+
+
+// <Route path="/cart" component={CartContainer}/>
