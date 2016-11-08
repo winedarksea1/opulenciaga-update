@@ -15,14 +15,28 @@ const removeFromCart = product => {
   }
 }
 
-export const fetchAndAddProductToOrder = (category, productId) => {
+export const fetchAndAddProductToOrder = (userId, productId) => {
   dispatch =>
-    axios.put(`/products/${category}/${productId}`)
+    axios.put(`/products/${userId}/cart/${productId}`)
       .then(res => {
         console.log(res);
-        res.json
+        res.json()
       })
-      .then(product =>{ addToCart(product)})
+      .then(product => { addToCart(product) })
+      .catch(err => console.error(err));
+}
+
+export const createCartAndAddProductToOrder = (userId, productId) => {
+  dispatch =>
+    axios.post(`/products/${userId}/cart`)
+      .then(order => {
+        axios.put(`/products/${userId}/cart/${productId}`)
+        .then(res => {
+          res.json()
+        })
+        .then(product => { addToCart(product) })
+        .catch(err => console.error(err));
+      })
       .catch(err => console.error(err));
 }
 

@@ -9,11 +9,8 @@ export default class Product extends React.Component {
 
    render() {
 
-     const { product, fetchProduct } = this.props;
-     function test() {
-       console.log("JUST TO CHECK: ", fetchProduct)
-     }
-     test()
+     const { product, addProductToCart, createCartAndAddProductToCart } = this.props;
+
 
      return(
        <div>
@@ -28,7 +25,8 @@ export default class Product extends React.Component {
                      <li>{product.description}</li>
                      <li>{product.price}</li>
                      <li>{product.quantity}</li>
-                     <li><button onClick={() => fetchProduct(product.category, product.id)}>Add to cart!</button></li>
+                     <li><button onClick={() => addProductToCart(1, product.id)}>Add to cart!</button></li>
+                     <li><button onClick={() => createCartAndAddProductToCart(1, product.id)}>Create cart!</button></li>
                    </ul>
                  </div>
                </div>

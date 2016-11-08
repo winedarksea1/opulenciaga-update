@@ -1,14 +1,15 @@
 import { connect } from 'react-redux';
 import Product from '../components/Product';
 import { getProductById } from '../action-creators/Product';
-import { fetchAndAddProductToOrder } from "../action-creators/Order";
+import { fetchAndAddProductToOrder, createCartAndAddProductToOrder } from "../action-creators/Order";
 
 const mapStateToProps = ({product}) => ({
   product
 })
 
 const mapDispatchToProps = dispatch => ({
-  fetchProduct: (category, productId) => dispatch(fetchAndAddProductToOrder(category, productId)),
+  addProductToCart: (userId, productId) => dispatch(fetchAndAddProductToOrder(userId, productId)),
+  createCartAndAddProductToCart: (userId, productId) => dispatch(createCartAndAddProductToOrder(userId, productId)),
   findProductById: () => dispatch(getProductById(category, productId))
 })
 
