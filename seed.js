@@ -8,11 +8,13 @@ var Order = require('./db/models/order');
 
 let users = [
 {
-  name: "James Kim",
+  firstName: "James",
+  lastName: "Kim",
   email: "jkim@gmail.com"
 },
 {
-  name: "Andy McGovern",
+  firstName: "Andy",
+  lastName: "McGovern",
   email: "winedark.mcgovern@gmail.com",
   isAdmin: true
 }
