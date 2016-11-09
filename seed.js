@@ -38,98 +38,98 @@ let products = [
 {
   name: "Sabai Acai",
   price: 9001,
-  imgUrl: "opulenciaga_images/sabaiwine.png",
+  imgUrl: "/opulenciaga_images/sabaiwine.png",
   description: "The wine of the Gods. Earthy and full-bodied.",
   quantity: 1,
-  category: "shoelace"
+  category: "wines"
 },
 {
   name: "Aqua Vino",
   price: 420,
-  imgUrl: "opulenciaga_images/wineglass.png",
+  imgUrl: "/opulenciaga_images/wineglass.png",
   description: "Crisp, flavorless, gluten-free, non-alcoholic, vegan-friendly, atheist-approved wine. The perfect conversation starter for attack helicopters.",
   quantity: 10,
-  category: "shoelace"
+  category: "wines"
 },
 {
   name: "Infinity Handcuff Wine",
   price: 1999,
-  imgUrl: "opulenciaga_images/wine.png",
+  imgUrl: "/opulenciaga_images/wine.png",
   description: "Dangerously delicious. Not for the faint of heart.",
   quantity: 3,
-  category: "shoelace"
+  category: "wines"
 },
 {
-  name: "You and Me Cufflinks",
+  name: "Flowerbomb",
   price: 2000,
-  imgUrl: "https://img0.etsystatic.com/101/1/6513368/il_340x270.837961776_a9jr.jpg",
-  description: "Oak Dutch imports",
+  imgUrl: "/opulenciaga_images/perfume.png",
+  description: "A splash of luxury.",
   quantity: 3,
-  category: "cufflink"
+  category: "perfumes"
 },
 {
-  name: "Moon Cufflinks",
-  price: 2000,
-  imgUrl: "https://img1.etsystatic.com/100/0/5396760/il_340x270.829222101_mqpz.jpg",
-  description: "Marble Dutch imports",
-  quantity: 3,
-  category: "cufflink"
+  name: "Acqua Like Agua",
+  price: 8000,
+  imgUrl: "/opulenciaga_images/aquadigio.png",
+  description: "A scent to be smelled.",
+  quantity: 4,
+  category: "perfumes"
 },
 {
-  name: "Click Cufflinks",
-  price: 2000,
-  imgUrl: "https://img0.etsystatic.com/137/0/7645072/il_340x270.1035903992_4p56.jpg",
-  description: "Marble German imports",
-  quantity: 3,
-  category: "cufflink"
+  name: "Pour Monsieur",
+  price: 10000,
+  imgUrl: "/opulenciaga_images/paper1perfume.png",
+  description: "Because French sounds cool.",
+  quantity: 2,
+  category: "perfumes"
 },
 {
-  name: "Orange Tie",
-  price: 2000,
-  imgUrl: "http://www.johnstuxedos.com/wp-content/uploads/2015/06/Boiled-Crab-Etouffee-Orange-400x400.jpg",
-  description: "Virgin Silkworm imports",
+  name: "One Together",
+  price: 123456,
+  imgUrl: "/opulenciaga_images/rings.png",
+  description: "Together one. Scarf sold separately.",
   quantity: 3,
-  category: "tie"
+  category: "rings"
 },
 {
-  name: "Red Tie",
-  price: 2000,
-  imgUrl: "http://www.johnstuxedos.com/wp-content/uploads/2013/07/Tie-Boiled-Crab-Cayenne-Red-Large-400x400.jpg",
-  description: "Rare Belgian wool imports",
+  name: "That Ring From Lord of the Rings",
+  price: 999999,
+  imgUrl: "/opulenciaga_images/hermesring.png",
+  description: "The ring to rule them all...",
   quantity: 3,
-  category: "tie"
+  category: "rings"
 },
 {
-  name: "Louisiana Etouffe Orange Tie",
+  name: "The Lion King",
   price: 2000,
-  imgUrl: "http://www.johnstuxedos.com/wp-content/uploads/2015/06/Louisiana-Etouffee-Orange-400x400.jpg",
-  description: "Rare Belgian wool imports",
+  imgUrl: "/opulenciaga_images/cartierring.png",
+  description: "Not only Hakuna, but also Matata.",
   quantity: 3,
-  category: "tie"
+  category: "rings"
 },
 {
-  name: "Brown Fedora",
+  name: "Omega",
   price: 2000,
-  imgUrl: "https://s-media-cache-ak0.pinimg.com/736x/da/9b/63/da9b63914a2febabc7698745de727e63.jpg",
-  description: "Rare London import",
+  imgUrl: "/opulenciaga_images/omega.png",
+  description: "Omega Shenron.",
   quantity: 3,
-  category: "hat"
+  category: "watches"
 },
 {
-  name: "Black Fedora",
+  name: "Rolex",
   price: 2000,
-  imgUrl: "https://s-media-cache-ak0.pinimg.com/736x/62/da/08/62da08717701989e8c5b11a61601f39d.jpg",
-  description: "Rare London import",
+  imgUrl: "/opulenciaga_images/rolex2.png",
+  description: "Because we just had to include a Rolex.",
   quantity: 3,
-  category: "hat"
+  category: "watches"
 },
 {
-  name: "Black Fedora with Brown strap",
+  name: "uwotm8",
   price: 2000,
-  imgUrl: "https://s-media-cache-ak0.pinimg.com/736x/0b/c9/d7/0bc9d7a43d3f4ca7ba440ab1a1a0f254.jpg",
-  description: "Italian import",
-  quantity: 3,
-  category: "hat"
+  imgUrl: "/opulenciaga_images/kfchat.png",
+  description: "lul",
+  quantity: 1,
+  category: "watches"
 }
 ];
 

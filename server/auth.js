@@ -16,7 +16,7 @@ passport.deserializeUser(
     debug('will deserialize user.id=%d', id)
     User.findById(id)
       .then(user => {
-        debug('deserialize did ok user.id=%d', user.id)
+        // debug('deserialize did ok user.id=%d', user.id)
         done(null, user)
       })
       .catch(err => {
@@ -38,11 +38,11 @@ passport.use(new (require('passport-local').Strategy) (
         return user.authenticate(password)
           .then(ok => {
             if (!ok) {
-              debug('authenticate user(email: "%s") did fail: bad password')              
+              debug('authenticate user(email: "%s") did fail: bad password')
               return done(null, false, { message: 'Login incorrect' })
             }
             debug('authenticate user(email: "%s") did ok: user.id=%d', user.id)
-            done(null, user)              
+            done(null, user)
           })
       })
       .catch(done)
@@ -58,4 +58,3 @@ auth.post('/:strategy/login', (req, res, next) =>
 )
 
 module.exports = auth
-

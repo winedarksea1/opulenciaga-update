@@ -4,11 +4,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import Home from './components/Home';
-import { Router, hashHistory, Route, IndexRoute, IndexRedirect } from 'react-router';
+import { Router, browserHistory, Route, IndexRoute, IndexRedirect } from 'react-router';
 import {render} from 'react-dom'
 import {receiveProducts} from './action-creators/Products';
 import CategoryContainer from "./containers/CategoryContainer";
 import Carousel from "./components/Carousel";
+import Checkout from "./components/Checkout";
 import ProductsContainer from "./containers/ProductsContainer";
 import ProductContainer from "./containers/ProductContainer";
 import Account from "./components/Account";
@@ -71,10 +72,11 @@ const onOrdersEnter = function(nextRouterState) {
 
 render (
   <Provider store={store}>
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
       <Route path="/" component={Home}>
         <IndexRedirect to="/home"/>
         <Route path="/home" component={Carousel}/>
+        <Route path="/checkout" component={Checkout}/>
         <Route path="/account" component={SignInOutUpContainer}/>
         <Route path="/cart" component={CartContainer}/>
         <Route path="/:category" component={CategoryContainer} onEnter={onCategoryEnter}/>

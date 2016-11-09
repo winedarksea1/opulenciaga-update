@@ -1,5 +1,6 @@
 import { CREATE_USER, SET_CURRENT_USER, RECEIVE_ALL_ORDERS_FOR_USER } from '../constants';
 import axios from "axios";
+import { browserHistory } from 'react-router';
 
 export const createUser = user => ({
  type: CREATE_USER,
@@ -18,13 +19,19 @@ export const getOrders = orders => ({
 
 export const login = credentials => dispatch => {
   axios.post('api/auth/local/login', credentials)
-       .then(res => dispatch(setCurrentUser(res.data)))
+       .then(res => {
+         dispatch(setCurrentUser(res.data))
+         browserHistory.push("/");
+       })
        .catch(err => console.error('Login unsuccesful', err));
 };
 
 export const signup = credentials => dispatch => {
   axios.post('/users/signup', credentials)
-       .then(res => dispatch(setCurrentUser(res.data)))
+       .then(res => {
+         dispatch(setCurrentUser(res.data))
+         browserHistory.push("/");
+       })
        .catch(err => console.error('Signup unsuccesful', err));
 };
 

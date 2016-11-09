@@ -46,8 +46,7 @@ export default class Cart extends React.Component {
                   </td>
                   <td data-th="Subtotal" className="text-center"></td>
                   <td className="actions" data-th="">
-                  <button className="btn btn-info btn-sm"><i className="fa fa-refresh"></i></button>
-                  <Link to="/cart"><button onClick={() => removeProductFromCart(1, product)}className="btn btn-danger btn-sm"><i className="fa fa-trash-o"></i>Remove</button></Link>
+                  <Link to="/home"><button onClick={() => removeProductFromCart(1, product)}className="btn btn-danger btn-sm"><i className="fa fa-trash-o"></i>Remove</button></Link>
                   </td>
                   </tr>
                   </tbody>
@@ -66,10 +65,10 @@ export default class Cart extends React.Component {
         							<td className="text-center"><strong>Total 1.99</strong></td>
         						</tr>
         						<tr>
-        							<td><a href="#" className="btn btn-warning"><i className="fa fa-angle-left"></i> Continue Shopping</a></td>
+        							<td><Link to="/home"><a href="#" className="btn btn-warning"><i className="fa fa-angle-left"></i> Continue Shopping</a></Link></td>
         							<td colspan="2" className="hidden-xs"></td>
         							<td className="hidden-xs text-center"><strong>Total ${order.currentPrices && order.currentPrices.reduce((a, b) => a + b) || 0}.00</strong></td>
-        							<td><a href="#" className="btn btn-success btn-block">Checkout <i className="fa fa-angle-right"></i></a></td>
+        							<td><Link to="/checkout"><a href="#" className="btn btn-success btn-block">Checkout <i className="fa fa-angle-right"></i></a></Link></td>
         						</tr>
         					</tfoot>
         				</table>

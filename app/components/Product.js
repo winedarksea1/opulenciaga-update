@@ -18,9 +18,9 @@ export default class Product extends React.Component {
          {
            <div>
             <div className="col-sm-6 col-md-2"></div>
-             <div className="col-sm-6 col-md-6" key = {product.id}>
+             <div className="col-sm-6 col-md-6" key={product.id}>
 
-                 <img className="productImage" src = {product.imgUrl} />
+                 <img className="productImage" src={product.imgUrl} />
 
 
              </div>

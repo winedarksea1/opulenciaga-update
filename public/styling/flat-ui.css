@@ -6466,6 +6466,10 @@ h2 {
   font-size: 1em;
 }
 
+[type=submit]:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 [type='text']:focus {
   outline: none;
   border-color: #53CACE;
@@ -6698,6 +6702,37 @@ td {
   font-weight: 500;
   /*border-radius: 6px;*/
   font-family: "Helvetica Neue"
+}
+
+#addToCartButton:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.btn-success:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  /*color: rgb(192, 192, 192);*/
+}
+
+.btn-warning:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  /*color: rgb(192, 192, 192);*/
+}
+
+.btn-danger:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#checkoutRectangle {
+  height: 200px;
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  /*position: fixed;
+  top: 500px;*/
+}
+
+#checkoutContainer {
+  color: red;
+
 }
 
 /*# sourceMappingURL=flat-ui.css.map */
