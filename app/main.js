@@ -12,6 +12,7 @@ import Carousel from "./components/Carousel";
 import ProductsContainer from "./containers/ProductsContainer";
 import ProductContainer from "./containers/ProductContainer";
 import Account from "./components/Account";
+import SignInOutUpContainer from './containers/SignInOutUpContainer';
 import OrdersContainer from './containers/OrdersContainer';
 import CartContainer from "./containers/CartContainer";
 import { getCategory } from "./action-creators/Category";
@@ -74,7 +75,7 @@ render (
       <Route path="/" component={Home}>
         <IndexRedirect to="/home"/>
         <Route path="/home" component={Carousel}/>
-        <Route path="/account" component={Account}/>
+        <Route path="/account" component={SignInOutUpContainer}/>
         <Route path="/cart" component={CartContainer}/>
         <Route path="/:category" component={CategoryContainer} onEnter={onCategoryEnter}/>
         <Route path="/:category/:productId" component={ProductContainer} onEnter={onProductEnter}/>
