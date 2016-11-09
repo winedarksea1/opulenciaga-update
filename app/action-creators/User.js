@@ -17,7 +17,7 @@ export const getOrders = orders => ({
 });
 
 export const login = credentials => dispatch => {
-  axios.post('/users/login', credentials)
+  axios.post('api/auth/local/login', credentials)
        .then(res => dispatch(setCurrentUser(res.data)))
        .catch(err => console.error('Login unsuccesful', err));
 };

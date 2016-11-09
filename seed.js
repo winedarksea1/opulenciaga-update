@@ -52,7 +52,7 @@ let products = [
   category: "shoelace"
 },
 {
-  name: "Handcuff Red Wine",
+  name: "Infinity Handcuff Wine",
   price: 1999,
   imgUrl: "opulenciaga_images/wine.png",
   description: "Dangerously delicious. Not for the faint of heart.",

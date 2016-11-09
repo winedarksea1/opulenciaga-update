@@ -1,4 +1,4 @@
-import { CREATE_CART, ADD_PRODUCT_TO_ORDER, REMOVE_PRODUCT_FROM_ORDER, CHECKOUT_ORDER } from '../constants';
+import { REMOVE_ORDER, CREATE_CART, ADD_PRODUCT_TO_ORDER, REMOVE_PRODUCT_FROM_ORDER, CHECKOUT_ORDER } from '../constants';
 import axios from "axios";
 
 const addToCart = product => {
@@ -22,6 +22,13 @@ const addOrder = order => {
   }
 }
 
+const removeOrder = order => {
+  return {
+    type: REMOVE_ORDER,
+    order
+  }
+}
+
 export const fetchAndAddProductToOrder = (userId, productId) => {
   console.log("HI CHRISSSSS");
   return dispatch => {
@@ -34,6 +41,18 @@ export const fetchAndAddProductToOrder = (userId, productId) => {
       .catch(err => console.error(err))
       // .then(product => { addToCart(product) })
       // .catch(err => console.error(err));
+  }
+}
+
+export const fetchAndRemoveProductFromOrder = (userId, productName) => {
+  console.log("are we in the fetch?", productName)
+  return dispatch => {
+    return axios.put(`/orders/${userId}/cart/${productName}/remove`)
+      .then(order => {
+        console.log("are we after the axios")
+        dispatch(removeOrder(order.data))
+      })
+      .catch(err => console.error(err))
   }
 }
 

@@ -22,6 +22,10 @@ module.exports = db.define('orders', {
     currentPrices: {
       type: Sequelize.ARRAY(Sequelize.INTEGER),
       defaultValue: []
+    },
+    currentImages: {
+      type: Sequelize.ARRAY(Sequelize.STRING),
+      defaultValue: []
     }
   },
   {
@@ -57,6 +61,29 @@ module.exports = db.define('orders', {
     },
     addNewPrice: function(price) {
       return this.set({currentPrices: [...this.currentPrices, price]});
+    },
+    addNewImage: function(image) {
+      return this.set({currentImages: [...this.currentImages, image]});
+    },
+    removeNewProduct: function(product) {
+      console.log("in remove")
+      console.log(product)
+      let index = this.currentProducts.indexOf(product);
+      console.log(index);
+      console.log(this.currentProducts);
+      let newArray = this.currentProducts.slice(0, index).concat(this.currentProducts.slice(index +1));
+      console.log(newArray);
+      return this.set({currentProducts: newArray});
+    },
+    removeNewPrice: function(price) {
+      let index = this.currentPrices.indexOf(price);
+      let newArray = this.currentPrices.slice(0, index).concat(this.currentPrices.slice(index +1));
+      return this.set({currentPrices: newArray});
+    },
+    removeNewImage: function(image) {
+      let index = this.currentImages.indexOf(image);
+      let newArray = this.currentImages.slice(0, index).concat(this.currentImages.slice(index +1));
+      return this.set({currentImages: newArray});
     }
   }
   });

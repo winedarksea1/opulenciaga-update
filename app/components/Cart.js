@@ -1,6 +1,6 @@
 import React from 'react';
 import Product from './Product';
-
+import { Link } from "react-router";
 //get these from this.prop
 export default class Cart extends React.Component {
     constructor(props) {
@@ -10,7 +10,7 @@ export default class Cart extends React.Component {
 
     render() {
 
-      const { order } = this.props;
+      const { order, removeProductFromCart } = this.props;
 
       console.log("CHRIS THIS IS OUR ORDER!!!!!!!!!!!!!!!", order)
 
@@ -32,7 +32,7 @@ export default class Cart extends React.Component {
                   <tr>
                   <td data-th="Product">
                   <div className="row">
-                  <div className="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." className="img-responsive"/></div>
+                  <div className="col-sm-2 hidden-xs"><img src={order.currentImages[index]} alt="..." className="img-responsive"/></div>
                   <div className="col-sm-10">
                   <h4 className="nomargin">Product {index + 1}</h4>
                   <div>{product}</div>
@@ -47,7 +47,7 @@ export default class Cart extends React.Component {
                   <td data-th="Subtotal" className="text-center"></td>
                   <td className="actions" data-th="">
                   <button className="btn btn-info btn-sm"><i className="fa fa-refresh"></i></button>
-                  <button className="btn btn-danger btn-sm"><i className="fa fa-trash-o"></i>Remove</button>
+                  <Link to="/cart"><button onClick={() => removeProductFromCart(1, product)}className="btn btn-danger btn-sm"><i className="fa fa-trash-o"></i>Remove</button></Link>
                   </td>
                   </tr>
                   </tbody>

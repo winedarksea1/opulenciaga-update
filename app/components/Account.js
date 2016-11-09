@@ -28,7 +28,7 @@ export default class Account extends React.Component {
       const { login } = this.props;
 
       const credentials = {
-        email: event.target.email.value,
+        username: event.target.email.value,
         password: event.target.password.value
       };
       console.log(credentials);

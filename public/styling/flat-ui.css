@@ -6665,4 +6665,39 @@ td {
 .paragraphtext > h2 {
   color: rgba(0, 0, 0, 0.8);
 }
+
+#singleProductText {
+  color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 300px;
+  right: 300px;
+}
+
+#singleProductText > ul li {
+  list-style: none;
+
+}
+
+#singleProductName {
+  font-size: 40px;
+  padding: 0 0 20px 15px;
+}
+
+#singleProductDescription {
+  font-size: 20px;
+  padding: 0 0 10px 0;
+}
+
+#addToCartButton {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgb(0, 0, 0));
+  /*border-color: #07c;*/
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.54615;
+  font-weight: 500;
+  /*border-radius: 6px;*/
+  font-family: "Helvetica Neue"
+}
+
 /*# sourceMappingURL=flat-ui.css.map */

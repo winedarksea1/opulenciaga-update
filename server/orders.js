@@ -82,6 +82,7 @@ router.put('/:userId/cart/:productId', function(req, res, next) {
         .then(product => {
           order.addNewProduct(product.name);
           order.addNewPrice(product.price);
+          order.addNewImage(product.imgUrl);
           return order.save()
           .then(order => res.json(order))
         })
@@ -109,11 +110,42 @@ router.put('/:userId/cart/:productId', function(req, res, next) {
         .then(product => {
           order.addNewProduct(product.name);
           order.addNewPrice(product.price);
+          order.addNewImage(product.imgUrl);
           return order.save()
           .then(order => res.json(order))
         })
         // res.json(order)
       });
+    }})
+    .catch(err => console.error(err));
+});
+
+router.put('/:userId/cart/:productName/remove', function(req, res, next) {
+  console.log("are we hitting this route");
+  Order.findOne({
+    where: {
+      user_id: req.params.userId
+    }
+  })
+  .then(order => {
+    if (order) {
+        console.log("Cart already created", order)
+        // console.log("req.params", req.params.productId)
+        return Product.findOne({
+          where: {
+            name: req.params.productName
+          }
+        })
+        .then(product => {
+          console.log("This is our product", product)
+          console.log("HELP", product.name)
+          order.removeNewProduct(product.name);
+          order.removeNewPrice(product.price);
+          order.removeNewImage(product.imgUrl);
+          console.log("we are almost done")
+          return order.save()
+          .then(order => res.json(order))
+        })
     }})
     .catch(err => console.error(err));
 });
