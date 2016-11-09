@@ -138,6 +138,7 @@ router.put('/:userId/cart/:productName/remove', function(req, res, next) {
         })
         .then(product => {
           console.log("This is our product", product)
+          console.log('James says hi')
           console.log("HELP", product.name)
           order.removeNewProduct(product.name);
           order.removeNewPrice(product.price);
