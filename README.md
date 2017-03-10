@@ -1,39 +1,4 @@
-# Hi, I'm bones
-
-I'm a happy little skeleton. You can clone me to use as a starter on your projects!
-I have React, Redux, Sequelize, and Express all just rattling around in here ready
-to go.
-
-## 1. Make me into something!
-
-Create a git repo however you want to. You can fork me on Github, but you can only do
-that once (so weird!). You can also create a Github repo and clone it, or just do
-`git init` in an empty directory on your machine.
-
-After you have a repo on your machine:
-
-```
-git remote add bones https://github.com/queerviolet/bones.git
-git fetch bones
-git merge bones/master
-```
-
-And then you'll have me! If I change—which I probably will—you can get the most recent
-version by doing this again:
-
-```
-git fetch bones
-git merge bones/master
-```
-
-## 2. I need a name.
-
-I don't have a name. I think I used to have one, but it turned to dust right along with my
-heart and liver and pituitary gland and all that stuff.
-
-Anyway, I'll need one. Give me a name in `package.json`.
-
-## 3. Start my dusty heart
+OPULENCIAGA: A e-commerce application for purchasing luxury goods!
 
 Short and sweet:
 
@@ -61,6 +26,3 @@ assuming you're using postgres.
 I use `require` and `module.exports` in `.js` files.
 
 I use `import` and `export` in `.jsx` files, unless `require` makes for cleaner code.
-
-
-
